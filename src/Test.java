@@ -9,22 +9,42 @@ public class Test {
 //		String entree=lol.nextLine();
 //		System.out.println(entree);
 		
-		methodMan();
-	}
-	
-	static void methodMan() {
-		int a = 10;
-		String b = "lrgkngjerngej";
-		System.out.println(b+a);
+		// Afficher le max entre deux nombres
+		//testConditionTernaire(saisirNombre(),saisirNombre());
 		
-		int x = 5;
-		int y = ++x;
-		System.out.println(y);
+		// Afficher si le nombre est pair ou impair
+		//testOddEven(saisirNombre());
+		
+		// Tests Switch Case Jour de la semaine
+		testSwitchCase(saisirNombre());
 	}
 	
-	static void redMan() {
-		Scanner entree= new Scanner(System.in);
-		String nom = entree.nextLine();
+	static int saisirNombre() {
+		System.out.println("Entrer un nombre");
+		Scanner saisie=new Scanner(System.in);
+		int nbr = saisie.nextInt();
+		return nbr;
+		
+	}
+	
+	static void testConditionTernaire(int a, int b) {
+		System.out.println("Le max entre " + a + " et " + b + " est " + ((a>b)?a:b));
 	}
 
+	static void testOddEven(int a){
+		System.out.println(a + " Est un nombre " + ((a%2 == 0)?"pair":"impair"));
+	}
+	
+	static void testSwitchCase(int a){
+		switch(a){
+		case 1: System.out.println("Lundi");break;
+		case 2: System.out.println("Mardi");break;
+		case 3: System.out.println("Mercredi");break;
+		case 4: System.out.println("Jeudi");break;
+		case 5: System.out.println("Vendredi");break;
+		case 6: 
+		case 7: System.out.println("Weekend");break;
+		default: System.out.println("Il n'y a que 7 jours dans la semaine");break;
+		}
+	}
 }
