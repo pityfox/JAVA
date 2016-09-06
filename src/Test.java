@@ -7,22 +7,9 @@ public class Test {
 
 	public static void main(String[] args) {
 		menu();
-		// Afficher le max entre deux nombres
-		//testConditionTernaire(saisirNombre(),saisirNombre());
-		
-		// Afficher si le nombre est pair ou impair
-		//testOddEven(saisirNombre());
-		
-		// Tests Switch Case Jour de la semaine
-		//testSwitchCase(saisirNombre());
-		
-		// Affichage Tableau
-		//testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));
-		
-		// Test Jeu Aléatoire
-		//testJeuAleatoire();
 	}
 	
+	// Menu de selection de jeux trop fun
 	static void menu(){
 		int nb = -1;
 		while(!(0<=nb && nb<=5)){
@@ -46,10 +33,12 @@ public class Test {
 			case 3: testSwitchCase(saisirNombre("jour de la semaine"));break;
 			case 4: testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));break;
 			case 5: testJeuAleatoire();break;
+			default: System.out.println("Numéro invalide ! Try Again !");
 			}
 		}
 	}
 	
+	// Fonction pour saisir un nombre
 	static int saisirNombre(String demande) {
 		System.out.println("Entrer un nombre pour " + demande);
 		Scanner saisie=new Scanner(System.in);
@@ -58,6 +47,7 @@ public class Test {
 		
 	}
 	
+	// Fonction pour saisir un string
 	static String saisirChar(String demande) {
 		System.out.println("Entrer un nombre pour " + demande);
 		Scanner saisie=new Scanner(System.in);
@@ -66,14 +56,17 @@ public class Test {
 		
 	}
 	
+	// Trouve le max entre deux nombres
 	static void testConditionTernaire(int a, int b) {
 		System.out.println("Le max entre " + a + " et " + b + " est " + ((a>b)?a:b));
 	}
 
+	// Indique si le nombre est pair ou impair
 	static void testOddEven(int a){
 		System.out.println(a + " Est un nombre " + ((a%2 == 0)?"pair":"impair"));
 	}
 	
+	// Swich un int en jour de la semaine
 	static void testSwitchCase(int a){
 		switch(a){
 		case 1: System.out.println("Lundi");break;
@@ -87,6 +80,7 @@ public class Test {
 		}
 	}
 	
+	// Creer un tableau lxL rempli par un motif char
 	static void testAfficheTableau(int largeur, int longueur, String caractere){
 		for(int row = 0; row < largeur; row++){
 			for (int col = 0; col < longueur; col++){
@@ -96,6 +90,7 @@ public class Test {
 		}
 	}
 	
+	// Devine le chiffre
 	static void testJeuAleatoire(){
 		Random R = new Random();
 		int nb = R.nextInt(10);
