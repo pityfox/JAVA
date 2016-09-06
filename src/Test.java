@@ -16,14 +16,25 @@ public class Test {
 		//testOddEven(saisirNombre());
 		
 		// Tests Switch Case Jour de la semaine
-		testSwitchCase(saisirNombre());
+		//testSwitchCase(saisirNombre());
+		
+		// Affichage Tableau
+		testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));
 	}
 	
-	static int saisirNombre() {
-		System.out.println("Entrer un nombre");
+	static int saisirNombre(String demande) {
+		System.out.println("Entrer un nombre pour " + demande);
 		Scanner saisie=new Scanner(System.in);
 		int nbr = saisie.nextInt();
 		return nbr;
+		
+	}
+	
+	static String saisirChar(String demande) {
+		System.out.println("Entrer un nombre pour " + demande);
+		Scanner saisie=new Scanner(System.in);
+		String a = saisie.nextLine();
+		return a;
 		
 	}
 	
@@ -45,6 +56,15 @@ public class Test {
 		case 6: 
 		case 7: System.out.println("Weekend");break;
 		default: System.out.println("Il n'y a que 7 jours dans la semaine");break;
+		}
+	}
+	
+	static void testAfficheTableau(int largeur, int longueur, String caractere){
+		for(int row = 0; row < largeur; row++){
+			for (int col = 0; col < longueur; col++){
+				System.out.print(caractere + " ");
+			}
+			System.out.println("\n");
 		}
 	}
 }
