@@ -62,9 +62,9 @@ public class Test {
 	static void testAfficheTableau(int largeur, int longueur, String caractere){
 		for(int row = 0; row < largeur; row++){
 			for (int col = 0; col < longueur; col++){
-				System.out.print(caractere + " ");
+				System.out.print(caractere + "\t");
 			}
-			System.out.println("\n");
+			System.out.println("");
 		}
 	}
 }
