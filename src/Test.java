@@ -1,4 +1,7 @@
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
 
 public class Test {
 
@@ -19,7 +22,10 @@ public class Test {
 		//testSwitchCase(saisirNombre());
 		
 		// Affichage Tableau
-		testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));
+		//testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));
+		
+		// Test Jeu Aléatoire
+		testJeuAleatoire();
 	}
 	
 	static int saisirNombre(String demande) {
@@ -66,5 +72,23 @@ public class Test {
 			}
 			System.out.println("");
 		}
+	}
+	
+	static void testJeuAleatoire(){
+		Random R = new Random();
+		int nb = R.nextInt(10);
+		int tentatives = 0;
+		int guessNb;
+		
+		do {
+			tentatives++;
+			System.out.println("Essai #"+tentatives+" - Entrez un nombre entre 1 et 10 :");
+			Scanner saisie = new Scanner(System.in);
+			guessNb = saisie.nextInt();
+			if (guessNb > nb)System.out.println("C'est moins !");
+			else if (guessNb < nb)System.out.println("C'est plus !");		
+		}
+		while(nb != guessNb);
+		System.out.println("Vous avez trouvé en " + tentatives + " essais");
 	}
 }
