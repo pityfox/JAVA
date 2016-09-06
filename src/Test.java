@@ -6,12 +6,7 @@ import javax.swing.plaf.synth.SynthSpinnerUI;
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		System.out.println("STFU");
-//		Scanner lol=new Scanner(System.in);
-//		String entree=lol.nextLine();
-//		System.out.println(entree);
-		
+		menu();
 		// Afficher le max entre deux nombres
 		//testConditionTernaire(saisirNombre(),saisirNombre());
 		
@@ -25,7 +20,34 @@ public class Test {
 		//testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));
 		
 		// Test Jeu Aléatoire
-		testJeuAleatoire();
+		//testJeuAleatoire();
+	}
+	
+	static void menu(){
+		int nb = -1;
+		while(!(0<=nb && nb<=5)){
+			System.out.println("Liste des Jeux");
+			System.out.println("=========================");
+			System.out.println("1: Max entre deux nombres");
+			System.out.println("2: Pair ou Impair");
+			System.out.println("3: Jour de la semaine");
+			System.out.println("4: Tableau");
+			System.out.println("5: Jeu Aléatoire");
+			System.out.println("0: Quitter\n");
+			
+			System.out.println("Choisissez un jeu :");
+			Scanner saisie = new Scanner(System.in);
+			nb = saisie.nextInt();
+			
+			switch(nb){
+			case 0: System.out.println("Exit");break;
+			case 1: testConditionTernaire(saisirNombre("premier nombre"),saisirNombre("dexième nombre"));break;
+			case 2: testOddEven(saisirNombre("le fun"));break;
+			case 3: testSwitchCase(saisirNombre("jour de la semaine"));break;
+			case 4: testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));break;
+			case 5: testJeuAleatoire();break;
+			}
+		}
 	}
 	
 	static int saisirNombre(String demande) {
