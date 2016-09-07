@@ -20,6 +20,7 @@ public class Test {
 			System.out.println("3: Jour de la semaine");
 			System.out.println("4: Tableau");
 			System.out.println("5: Jeu Aléatoire");
+			System.out.println("6: Calculatrice");
 			System.out.println("0: Quitter\n");
 			
 			System.out.println("Choisissez un jeu :");
@@ -33,6 +34,7 @@ public class Test {
 			case 3: testSwitchCase(saisirNombre("jour de la semaine"));break;
 			case 4: testAfficheTableau(saisirNombre("largeur"),saisirNombre("longueur"),saisirChar("caractere"));break;
 			case 5: testJeuAleatoire();break;
+			case 6: calculatrice();break;
 			default: System.out.println("Numéro invalide ! Try Again !");
 			}
 		}
@@ -107,5 +109,43 @@ public class Test {
 		}
 		while(nb != guessNb);
 		System.out.println("Vous avez trouvé en " + tentatives + " essais");
+	}
+	
+	// Calculatrice
+	static void calculatrice(){
+		String choix = "";
+		while(choix.equals("0") != true && choix.equals("Quit") != true && choix.equals("quit") != true){
+			System.out.println("Choisir l'opération à effectuer en écrivant le nom ou le signe:");
+			System.out.println("+:Add, -:Sous, *:Mult, /:Div, 0:Quit");
+			Scanner entree = new Scanner(System.in);
+			choix = entree.nextLine();
+			
+			switch(choix){
+			case "+":case "Add": case "add": System.out.println(add(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "-":case "Sous": case "sous": System.out.println(sous(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "*":case "Mult": case "mult": System.out.println(mult(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "/":case "Div": case "div": System.out.println(div(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			}
+		}
+		
+	}
+	
+	// Opérations
+	static int add(int x, int y){
+		return x+y;
+	}
+	
+	static int sous(int x, int y){
+		return x-y;
+	}
+	
+	static int mult(int x, int y){
+		return x*y;
+	}
+	
+	static double div(int x, int y){
+		double a = x;
+		double b = y;
+		return a/b;
 	}
 }

@@ -22,7 +22,18 @@ public class Test2 {
 	}
 	
 	static int add(int x, int y){
-		System.out.println("je suis Charlie");
 		return x+y;
+	}
+	
+	static int sub(int x, int y){
+		return x-y;
+	}
+	
+	static int mult(int x, int y){
+		return x*y;
+	}
+	
+	static int div(int x, int y){
+		return x/y;
 	}
 }
