@@ -121,10 +121,18 @@ public class Test {
 			choix = entree.nextLine();
 			
 			switch(choix){
-			case "+":case "Add": case "add": System.out.println(add(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
-			case "-":case "Sous": case "sous": System.out.println(sous(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
-			case "*":case "Mult": case "mult": System.out.println(mult(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
-			case "/":case "Div": case "div": System.out.println(div(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "+":
+			case "Add":
+			case "add": System.out.println(add(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "-":
+			case "Sous":
+			case "sous": System.out.println(sous(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "*":
+			case "Mult":
+			case "mult": System.out.println(mult(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
+			case "/":
+			case "Div":
+			case "div": System.out.println(div(saisirNombre("opérant 1"), saisirNombre("opérant 2")));break;
 			}
 		}
 		

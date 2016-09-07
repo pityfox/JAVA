@@ -3,9 +3,14 @@ public class Test2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		m1();
-		m2("Gnocchi");
-		System.out.println(m3("tata"));
+		//m1();
+		//m2("Gnocchi");
+		//System.out.println(m3("tata"));
+		int a = 2;
+		int b = 5;
+		System.out.println(a + " " + b);
+		swap(a,b);
+		System.out.println(a + " " + b);
 	}
 
 	static void m1() {
@@ -21,19 +26,9 @@ public class Test2 {
 		return "à bientôt "+x;
 	}
 	
-	static int add(int x, int y){
-		return x+y;
-	}
-	
-	static int sub(int x, int y){
-		return x-y;
-	}
-	
-	static int mult(int x, int y){
-		return x*y;
-	}
-	
-	static int div(int x, int y){
-		return x/y;
+	static void swap(int a, int b){
+		int tmp = a;
+		a = b;
+		b = tmp;
 	}
 }
