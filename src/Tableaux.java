@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Tableaux {
@@ -8,7 +9,27 @@ public class Tableaux {
 //		testTableau();
 //		testTableau2();
 //		testTableau3();
-		System.out.println(testTableau4());
+//		System.out.println(testTableau4());
+//		testTableau5();
+//		String[] tab={"lol","lil","loul"};
+//		afficheTableau(tab);
+		
+//		int[] tab1 = {1,2,3,4,5,6};
+//		int[] tab2 = doublerTableau(tab1);
+//		afficheTableau(tab1);
+//		afficheTableau(tab2);
+		
+//		int[] tab1 = creerTableau();
+//		int[] tab2 = doublerTableau(tab1);
+//		afficheTableau(tab1);
+//		afficheTableau(tab2);
+		
+		int a = saisirNombre("valeur A");
+		int b = saisirNombre("valeur B");
+		int[] tab = {a,b};
+		System.out.println("A: " + a + " B: "+ b);
+		swapTableau(tab);
+		System.out.println("A: " + a + " B: "+ b);
 	}
 	
 	static int saisirNombre(String demande) {
@@ -51,5 +72,58 @@ public class Tableaux {
 		int sum = 0;
 		for(int el:tab) sum+=el;
 		return sum;
+	}
+	
+	static int[] creerTableau(){
+		int taille = saisirNombre("Taille du tableau :");
+		int[] tab = new int[taille];
+		for(int i=0; i<taille; i++) {
+			Random R = new Random();
+			int nb = R.nextInt(100);
+			tab[i]=nb;
+		}
+		return tab;
+	}
+	
+	static void testTableau5(){
+		int[] tab = creerTableau();
+		
+		System.out.println("Tableau :");
+		for(int el:tab)System.out.print(el+" ");
+		int count = 0;
+		int seek = saisirNombre("\nelement a rechercher :");
+		for(int el:tab){
+			if(el == seek)count++;
+		}
+		System.out.println("L'élément " + seek + " est présent " + count + " fois");
+	}
+	
+	static void afficheTableau(String[] x){
+		for(String s:x){
+			System.out.print(s+" ");
+		}
+		System.out.println();
+	}
+	
+	static void afficheTableau(int[] x){
+		for(int s:x){
+			System.out.print(s+" ");
+		}
+		System.out.println();
+	}
+	
+	static int[] doublerTableau(int[] x){
+		int[] newTab = new int[x.length];
+		for(int i=0;i<newTab.length;i++){
+			newTab[i] = x[i]*2;
+		}
+		return newTab;
+	}
+	
+	static int[] swapTableau(int a, int b){
+		int[] tab = {a,b};
+		tab[0] = 10;
+		
+		return tab;
 	}
 }
