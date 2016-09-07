@@ -6,11 +6,16 @@ public class Test2 {
 		//m1();
 		//m2("Gnocchi");
 		//System.out.println(m3("tata"));
-		int a = 2;
-		int b = 5;
-		System.out.println(a + " " + b);
-		swap(a,b);
-		System.out.println(a + " " + b);
+//		int a = 2;
+//		int b = 5;
+//		System.out.println(a + " " + b);
+//		swap(a,b);
+//		System.out.println(a + " " + b);
+		affiche();
+		affiche("Bobby");
+		affiche(1,4);
+		affiche("lol",2);
+		affiche(2, "lol");
 	}
 
 	static void m1() {
@@ -30,5 +35,24 @@ public class Test2 {
 		int tmp = a;
 		a = b;
 		b = tmp;
+	}
+	
+	static void affiche(){
+		System.out.println("Rien");
+	}
+	
+	static void affiche(String str){
+		System.out.println(str);
+	}
+	
+	static void affiche(int a, int b){
+		System.out.println(a + " " + b);
+	}
+	
+	static void affiche(String a, int b){
+		System.out.println(a + " " + b);
+	}
+	static void affiche(int a, String b){
+		System.out.println(a + " " + b);
 	}
 }
