@@ -24,7 +24,8 @@ public class Test4 {
 		//System.out.println(facto(16));
 		//System.out.println(fibonacci(25));
 		
-		
+		// simulateur de crédit
+		simulateurCredit();
 	}
 	
 	// Saisie d'une chaine de caractere
@@ -41,7 +42,6 @@ public class Test4 {
 		Scanner saisie=new Scanner(System.in);
 		int nbr = saisie.nextInt();
 		return nbr;
-		
 	}
 	
 	// Saisie d'un booléen
@@ -187,5 +187,39 @@ public class Test4 {
 	// fibonacci rang x, recursivité
 	static int fibonacci(int x){
 		return (x>1)?fibonacci(x-1) + fibonacci(x-2):x;
+	}
+	
+	// Simulateur de crédit
+	static void simulateurCredit(){
+		String nom = saisirString("Nom :");
+		String prenom = saisirString("Prénom :");
+		int age = saisirNombre("Age :");
+		int salaire = saisirNombre("Salaire Mensuel :");
+		
+		int montant = calculMontant(age, salaire);
+		
+		System.out.println(montant);
+	}
+	
+	// PArsing regles et calcul montant
+	static int calculMontant(int age, int salaire){
+		String regle = "20-40-15;41-60-20;61-80-25";
+		String[] regles = regle.split(";");
+		int taux = 0;
+		for(String el:regles){
+			String decoupe[] = el.split("-");
+			int tranches[] = new int[decoupe.length];
+			for(int i=0;i<decoupe.length;i++){
+				tranches[i] = Integer.parseInt(decoupe[i]);
+			}
+			if(tranches[0] <= age && age <= tranches[1]){
+				taux = tranches[2];
+			}
+		}
+		
+		int salaireAn = salaire * 12;
+		int montant = salaireAn * taux / 100;
+		
+		return montant;
 	}
 }
