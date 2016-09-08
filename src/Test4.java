@@ -14,7 +14,11 @@ public class Test4 {
 		//testRetour();
 		
 		// Modification de Strings
-		testReverse();
+		//testReverse();
+		
+		// VarArgs et VarObjects dans une methode
+		int[] tab = creerTableau();
+		affiche(1,2,12,48,"lol",true,1.2, tab);
 	}
 	
 	// Saisie d'une chaine de caractere
@@ -160,5 +164,9 @@ public class Test4 {
 	
 	static String capitalize(String str){
 		return str.toUpperCase();
+	}
+	
+	static void affiche(Object... x){
+		for(Object s:x)System.out.println(s);
 	}
 }
