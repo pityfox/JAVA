@@ -14,7 +14,7 @@ public class Test4 {
 		//testRetour();
 		
 		// Modification de Strings
-		//testReverse();
+		testReverse();
 	}
 	
 	// Saisie d'une chaine de caractere
@@ -136,20 +136,29 @@ public class Test4 {
 	// Inverser l'ordre des mots et mise en majuscules
 	static void testReverse(){
 		String phrase = saisirString("Ecrivez une phrase :");
-		String[] tab = phrase.split(" ");
-		reverseCaps(tab);
-		System.out.println(String.join(" ",tab));
-		//for(String el:tab)System.out.print(el+" ");
+		String phraseRev = reverse(phrase);
+		String phraseRevCap = capitalize(phraseRev);
+		System.out.println(phraseRevCap);
 	}
 	
 	// Inverser l'ordre d'un tableau et mise en majuscules
-	static void reverseCaps(String[] tab){
+	static String reverse(String str){
+		String[] strTab = str.split(" ");
+		computeReverse(strTab);
+		return String.join(" ", strTab);
+	}
+	
+	static void computeReverse(String[] tab){
 		String[] tab2 = new String[tab.length];
 		for(int i=0;i<tab.length;i++){
 			tab2[tab.length-1-i] = tab[i];
 		}
 		for(int i=0;i<tab.length;i++){
-			tab[i] = tab2[i].toUpperCase();
+			tab[i] = tab2[i];
 		}
+	}
+	
+	static String capitalize(String str){
+		return str.toUpperCase();
 	}
 }
