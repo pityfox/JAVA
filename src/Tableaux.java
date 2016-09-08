@@ -29,6 +29,8 @@ public class Tableaux {
 		int[] tab = {a,b};
 		System.out.println("A: " + a + " B: "+ b);
 		swapTableau(tab);
+		a = tab[0];
+		b = tab[1];
 		System.out.println("A: " + a + " B: "+ b);
 	}
 	
@@ -120,10 +122,9 @@ public class Tableaux {
 		return newTab;
 	}
 	
-	static int[] swapTableau(int a, int b){
-		int[] tab = {a,b};
-		tab[0] = 10;
-		
-		return tab;
+	static void swapTableau(int[] tab){
+		int temp = tab[0];
+		tab[0] = tab[1];
+		tab[1] = temp;
 	}
 }
