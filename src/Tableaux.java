@@ -24,6 +24,7 @@ public class Tableaux {
 //		afficheTableau(tab1);
 //		afficheTableau(tab2);
 		
+		// Swap deux variables avec tableau
 		int a = saisirNombre("valeur A");
 		int b = saisirNombre("valeur B");
 		int[] tab = {a,b};
