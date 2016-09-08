@@ -55,7 +55,6 @@ public class Test {
 		Scanner saisie=new Scanner(System.in);
 		String a = saisie.nextLine();
 		return a;
-		
 	}
 	
 	// Trouve le max entre deux nombres

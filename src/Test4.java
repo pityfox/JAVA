@@ -5,14 +5,31 @@ public class Test4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testV2(creerTableau());
+		//testV2(creerTableau());
+		
+		test1();
 	}
+	
+	static String saisirString(String demande) {
+		System.out.println(demande);
+		Scanner saisie=new Scanner(System.in);
+		String a = saisie.nextLine();
+		return a;
+	}
+	
 	static int saisirNombre(String demande) {
-		System.out.println("Entrer un nombre pour " + demande);
+		System.out.println(demande);
 		Scanner saisie=new Scanner(System.in);
 		int nbr = saisie.nextInt();
 		return nbr;
 		
+	}
+	
+	static boolean saisirBool(String demande){
+		System.out.println(demande);
+		Scanner saisie=new Scanner(System.in);
+		boolean nbr = saisie.nextBoolean();
+		return nbr;
 	}
 	
 	static int[] creerTableau(){
@@ -51,5 +68,31 @@ public class Test4 {
 		afficheTableau(tab);
 		doublerTableauV2(tab);
 		afficheTableau(tab);
+	}
+	
+	static void test1(){
+		String nom = saisirString("Votre nom :");
+		String prenom = saisirString("Votre prénom :");
+		int age = saisirNombre("Votre âge :");
+		boolean homme = saisirBool("Homme?");
+		String nomComplet = test2(nom, prenom, homme);
+		String reponse = "Bonjour ";
+		reponse += test3(nomComplet, age);
+		System.out.println(reponse);
+	}
+	
+	static String test2(String nom, String prenom, Boolean homme){
+		return ((homme)?"Mr":"Mme")+" "+prenom+" "+nom;
+	}
+	
+	static String test3(String nomComplet, int age){
+		String etat="";
+		if(age >= 18){
+			etat="vous êtes majeur";
+		} else {
+			etat="vous êtes mineur";
+		}
+		
+		return nomComplet+" "+age+" ans, "+etat+".";
 	}
 }
