@@ -17,8 +17,14 @@ public class Test4 {
 		//testReverse();
 		
 		// VarArgs et VarObjects dans une methode
-		int[] tab = creerTableau();
-		affiche(1,2,12,48,"lol",true,1.2, tab);
+		//int[] tab = creerTableau();
+		//affiche(1,2,12,48,"lol",true,1.2, tab);
+		
+		// Récursivité: Factoriel et Fibonacci
+		//System.out.println(facto(16));
+		//System.out.println(fibonacci(25));
+		
+		
 	}
 	
 	// Saisie d'une chaine de caractere
@@ -137,7 +143,7 @@ public class Test4 {
 		tab[3] = tab[0]-tab[1];
 	}
 	
-	// Inverser l'ordre des mots et mise en majuscules
+	// Taper phrase, Inverser l'ordre des mots puis mise en majuscules
 	static void testReverse(){
 		String phrase = saisirString("Ecrivez une phrase :");
 		String phraseRev = reverse(phrase);
@@ -145,13 +151,14 @@ public class Test4 {
 		System.out.println(phraseRevCap);
 	}
 	
-	// Inverser l'ordre d'un tableau et mise en majuscules
+	// Inverser l'ordre des mots d'une phrase
 	static String reverse(String str){
 		String[] strTab = str.split(" ");
 		computeReverse(strTab);
 		return String.join(" ", strTab);
 	}
 	
+	// Inversion du contenu d un tableau
 	static void computeReverse(String[] tab){
 		String[] tab2 = new String[tab.length];
 		for(int i=0;i<tab.length;i++){
@@ -162,11 +169,23 @@ public class Test4 {
 		}
 	}
 	
+	// Mettre en MAJ
 	static String capitalize(String str){
 		return str.toUpperCase();
 	}
 	
+	// Methode avec type arguments et nombre indefinis
 	static void affiche(Object... x){
 		for(Object s:x)System.out.println(s);
+	}
+	
+	// Factorielle de x, recursivite
+	static long facto(long x){
+		return (x > 1)?x*facto(x-1):1;
+	}
+	
+	// fibonacci rang x, recursivité
+	static int fibonacci(int x){
+		return (x>1)?fibonacci(x-1) + fibonacci(x-2):x;
 	}
 }
