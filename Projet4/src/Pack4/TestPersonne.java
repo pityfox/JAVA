@@ -7,9 +7,22 @@ public class TestPersonne {
 		//test();
 		//test2();
 		//test3();
-		test4();
+		//test4();
+		test5();
 	}
 
+	static void test5(){
+		// Private & Public
+		Personne p1 = new Personne("Lil","Wayne", 1000);
+		System.out.println(p1);
+		
+		// Getters & Setters
+		p1.setAge(10);
+		System.out.println(p1.getAge());
+		//System.out.println(p1.age); NE MARCHE PAS car private....
+		
+	}
+	
 	static void test4(){
 		// Instance anonyme peut être utilisée pour déclencher une méthode "one shot"
 		System.out.println(new Personne().getHello());
@@ -17,18 +30,18 @@ public class TestPersonne {
 		String p = new Personne().getHello();
 		System.out.println(p);
 		
-		System.out.println(new Personne("lol","lil",50));
+		System.out.println(new Personne("Lil","Jon",50));
 	}
 	
 	static void test3(){
 		// Test de la methode create()
 		Personne pivot= new Personne();
 		
-		Personne p1 = pivot.create("a","b",10);
+		// Personne p1 = pivot.create("a","b",10);
 		Personne p2 = pivot.create("a","b");
 		
 		// toString est appelée automatiquement par le print
-		System.out.println(p1.toString());
+		//System.out.println(p1.toString());
 		System.out.println(p2);
 	}
 	

@@ -3,39 +3,48 @@ package Pack4;
 public class Personne {
 
 	// Instanciation des valeurs
-	String nom="abc";
-	String prenom;
-	int age;
+	private String nom;
+	private String prenom;
+	private int age;
+	
+	// Setters & Getters
+	public void setAge(int age){
+		if(age > 0 && age < 120)this.age=age;
+	}
+	
+	public int getAge(){
+		return age;
+	}
 	
 	// Constructeur par défaut sans paramètres
-	Personne()
+	public Personne()
 	{
 		this.nom="Dupond";
 	}
 	
 	//Constructeurs d'initialisation, paramètres passés au constructeur
-	Personne(String nom)
+	public Personne(String nom)
 	{
 		this.nom=nom;
 	}
 	
-	Personne(String nom, String prenom)
+	public Personne(String nom, String prenom)
 	{
 		this.nom=nom;
 		this.prenom=prenom;
 	}
 	
-	Personne(String nom, String prenom, int age)
+	public Personne(String nom, String prenom, int age)
 	{
 		// appel d'un constructeur, évite de redéfinir une nouvelle fois
 		this(nom,prenom);
 //		this.nom=nom;
 //		this.prenom=prenom;
-		this.age=age;
+		setAge(age);
 	}
 	
 	// Copie Constructeur
-	Personne(Personne x)
+	public Personne(Personne x)
 	{
 		this.nom=x.nom;
 		this.prenom=x.prenom;
@@ -44,23 +53,23 @@ public class Personne {
 	
 	// Méthodes
 	// Print l element
-	void affiche()
+	public void affiche()
 	{
 		System.out.println(nom+" "+prenom+" "+age);
 	}
 	
-	String getHello()
+	public String getHello()
 	{
 		return "Hello!";
 	}
 	
 	// Créée un objet Personne
-	Personne create(String nom, String prenom)
+	public Personne create(String nom, String prenom)
 	{
 		return new Personne(nom,prenom);
 	}
 	
-	Personne create(String nom, String prenom, int age)
+	private Personne create(String nom, String prenom, int age)
 	{
 		return new Personne(nom,prenom,age);
 	}
