@@ -4,11 +4,23 @@ public class TestPersonne {
 
 	public static void main(String[] args) {
 		
-		test();
-		test2();
-		
+		//test();
+		//test2();
+		test3();
 	}
 
+	static void test3(){
+		// Test de la methode create()
+		Personne pivot= new Personne();
+		
+		Personne p1 = pivot.create("a","b",10);
+		Personne p2 = pivot.create("a","b");
+		
+		// toString est appelée automatiquement par le print
+		System.out.println(p1.toString());
+		System.out.println(p2);
+	}
+	
 	static void test2(){
 		// Création d'un tableau de 3 cases de type Personne
 		Personne[] tab = new Personne[4];
