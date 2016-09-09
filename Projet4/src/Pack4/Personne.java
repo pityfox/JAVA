@@ -49,6 +49,11 @@ public class Personne {
 		System.out.println(nom+" "+prenom+" "+age);
 	}
 	
+	String getHello()
+	{
+		return "Hello!";
+	}
+	
 	// Créée un objet Personne
 	Personne create(String nom, String prenom)
 	{
@@ -59,6 +64,7 @@ public class Personne {
 	{
 		return new Personne(nom,prenom,age);
 	}
+	
 	// Version normalisée pour afficher
 	public String toString()
 	{

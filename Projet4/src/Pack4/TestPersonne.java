@@ -6,9 +6,20 @@ public class TestPersonne {
 		
 		//test();
 		//test2();
-		test3();
+		//test3();
+		test4();
 	}
 
+	static void test4(){
+		// Instance anonyme peut être utilisée pour déclencher une méthode "one shot"
+		System.out.println(new Personne().getHello());
+		
+		String p = new Personne().getHello();
+		System.out.println(p);
+		
+		System.out.println(new Personne("lol","lil",50));
+	}
+	
 	static void test3(){
 		// Test de la methode create()
 		Personne pivot= new Personne();
