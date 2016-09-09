@@ -5,9 +5,50 @@ public class TestPersonne {
 	public static void main(String[] args) {
 		
 		test();
+		test2();
 		
 	}
 
+	static void test2(){
+		// Création d'un tableau de 3 cases de type Personne
+		Personne[] tab = new Personne[4];
+		Personne p1 = new Personne("A","B",10);
+		tab[0] = p1;
+		
+		// Affichage direct de p1
+		p1.affiche();
+		// Affichage du p1 présent dans le tableau
+		tab[0].affiche();
+		
+		// Remise à null de p1
+		p1= null;
+		
+		// Le p1 du tableau est toujorus présent car copie
+		tab[0].affiche();
+		
+		// On récupère p1 du tableau
+		p1 = tab[0];
+		p1.affiche();
+		
+		// On ajoute d'autres personnes directement dans le tableau
+		tab[1] = new Personne("C","D",20);
+		tab[2] = new Personne("E","F", 30);
+		
+		// Affichage de chaque personne du tableau.
+		// !! Ne pas oublier le if null pour eviter plantage si case vide !!
+		for(Personne p:tab)
+			if(p!=null)
+				p.affiche();
+		
+		// Version boucle for
+		for(int i=0;i<tab.length;i++)
+			if(tab[i]!=null)
+				tab[i].affiche();
+		
+		// Utilisation de toString
+		System.out.println(p1);
+	}
+	
 	static void test(){
 //		Personne p1=new Personne();
 //		p1.nom="toto";

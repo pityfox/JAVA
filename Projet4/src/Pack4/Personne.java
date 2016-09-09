@@ -27,7 +27,7 @@ public class Personne {
 	
 	Personne(String nom, String prenom, int age)
 	{
-		// appel d'un constructeur
+		// appel d'un constructeur, évite de redéfinir une nouvelle fois
 		this(nom,prenom);
 //		this.nom=nom;
 //		this.prenom=prenom;
@@ -43,10 +43,15 @@ public class Personne {
 	}
 	
 	// Méthodes
+	// Print l element
 	void affiche()
 	{
-		int a=0;
 		System.out.println(nom+" "+prenom+" "+age);
 	}
 	
+	// Version normalisée pour afficher
+	public String toString()
+	{
+		return nom+" "+prenom+" "+age;
+	}
 }
