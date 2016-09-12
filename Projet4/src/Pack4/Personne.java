@@ -16,6 +16,14 @@ public class Personne {
 		return age;
 	}
 	
+	public void setNom(String nom){
+		if(!nom.equals("Dupond"))this.nom=nom;
+	}
+	
+	public String getNom(){
+		return "Bonjour "+nom;
+	}
+	
 	// Constructeur par défaut sans paramètres
 	public Personne()
 	{

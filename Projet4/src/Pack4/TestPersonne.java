@@ -21,6 +21,8 @@ public class TestPersonne {
 		System.out.println(p1.getAge());
 		//System.out.println(p1.age); NE MARCHE PAS car private....
 		
+		p1.setNom("Dupond&Dupont");
+		System.out.println(p1.getNom());
 	}
 	
 	static void test4(){
