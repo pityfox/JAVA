@@ -48,12 +48,12 @@ public class Ville {
 	}
 	
 	// Compare la grandeur entre deux villes
-	public void compare(Ville v2){
+	public String compare(Ville v2){
 		String size = (this.nbHabitants == v2.nbHabitants)?"de même taille":
 			(this.nbHabitants > v2.nbHabitants)?"plus grande":
 				"plus petite";
 		
-		System.out.println(this.nom+" est "+size+" que "+v2.nom);
+		return this.nom+" est "+size+" que "+v2.nom;
 	}
 	
 	// StoString
