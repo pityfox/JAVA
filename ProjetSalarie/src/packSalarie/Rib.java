@@ -6,6 +6,7 @@ public class Rib {
 	private String banque;
 	
 	// Constructeurs
+	// Par défaut prend les entrées de l'utilisateur
 	public Rib(){
 		this.numero = new Methods().saisirString("Numéro RIB :");
 		this.banque = new Methods().saisirString("Nom banque : ");

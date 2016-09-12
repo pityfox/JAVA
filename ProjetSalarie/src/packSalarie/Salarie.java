@@ -16,6 +16,7 @@ public class Salarie {
 	}
 
 	// Constructeurs
+	// Constructeur par défaut prend la saisie de l'utilisateur
 	public Salarie(){
 		this.nom = new Methods().saisirString("Nom :");
 		this.prenom = new Methods().saisirString("Prénom :");
@@ -25,6 +26,7 @@ public class Salarie {
 		this.status = new Status();
 	}
 	
+	// Constructeur par paramètres défini à l'appel
 	public Salarie(String nom, String prenom, long secu, int salaire, Rib rib, Status status) {
 		this.nom = nom;
 		this.prenom = prenom;

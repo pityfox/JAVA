@@ -8,8 +8,11 @@ public class Societe {
 	private Salarie[] salaries = new Salarie[10];
 
 	// Constructeurs
+	// Par défaut prend les entrées de l'utilisateur
 	public Societe(){
 		this.nom = Methods.saisirString("Nom société :");
+		
+		// On demande si l'utilisateur veut ajouter des salariés
 		int ajoutSal = Methods.saisirInt("Ajouter des salariés ? Tapez 1");
 		while(ajoutSal == 1){			
 			this.add(new Salarie());

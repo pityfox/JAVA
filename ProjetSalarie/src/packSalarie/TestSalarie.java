@@ -28,8 +28,9 @@ public class TestSalarie {
 //		x.remove(123);
 //		System.out.println(x);
 	
-		Societe x3 = new Societe();
-		System.out.println(x3);
+		// Test Creation par saisies de l'utilisateur
+//		Societe x3 = new Societe();
+//		System.out.println(x3);
 	}
 
 }

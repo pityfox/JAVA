@@ -6,6 +6,7 @@ public class Status {
 	private int annee;
 	
 	// Constructeurs
+	// Par défaut prend les entrées de l'utilisateur
 	public Status(){
 		this.cadre = new Methods().saisirBool("Cadre ?");
 		this.annee = new Methods().saisirInt("Année :");
