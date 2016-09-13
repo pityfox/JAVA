@@ -17,6 +17,7 @@ public class Prof {
 		return nom;
 	}
 	
+	// Le setNote notifie les eleves avec update
 	public void setNote(int note) {
 		this.note = note;
 		updateAll();
@@ -28,7 +29,7 @@ public class Prof {
 	}
 	
 	// Méthodes
-	// ajout d'un eleve 
+	// ajout d'un eleve = Abonnement
 	public void addEleve(Eleve el){
 		for(int i=0;i<this.eleves.length;i++){
 			if(this.eleves[i] == null){
@@ -38,7 +39,7 @@ public class Prof {
 		}
 	}
 	
-	// Notifier les eleves de la note = MAJ
+	// Notifier les eleves de la note = MAJ de leur note
 	private void updateAll(){
 		for(Eleve el:this.eleves)
 			if(el != null)

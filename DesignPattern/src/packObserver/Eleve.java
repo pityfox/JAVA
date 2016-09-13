@@ -22,6 +22,7 @@ public class Eleve {
 	}
 	
 	// Méthodes
+	// Récupère la note du prof
 	public void update(){
 		this.note = prof.getNote();
 	}
