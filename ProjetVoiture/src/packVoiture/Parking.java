@@ -16,7 +16,7 @@ public class Parking {
 	//Ajout voiture
 	public void add(Voiture voit){
 		for(int i=0;i<this.voitures.length;i++){
-			if(this.voitures[i] != null){
+			if(this.voitures[i] == null){
 				this.voitures[i] = voit;
 				break;
 			}
@@ -46,7 +46,9 @@ public class Parking {
 
 	// toString
 	public String toString() {
-		return "Parking [nom=" + nom + ", voitures=" + Arrays.toString(voitures) + "]";
+		String reponse = "Parking " + nom + "\n voitures :\n";
+		for(Voiture voit:this.voitures)reponse += (voit != null)?"\t"+voit.toString()+"\n":"";
+		return reponse;
 	}
 	
 	

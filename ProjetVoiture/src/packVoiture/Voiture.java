@@ -46,11 +46,11 @@ public class Voiture {
 		count++;
 	}
 	
-	public Voiture(String matricule, String marque, Roues r, Chassis c){
+	public Voiture(String matricule, String marque, Roues r, String chassis){
 		this.matricule = matricule;
 		this.marque = marque;
 		this.roues = r;
-		this.chassis = c;
+		this.chassis = new Chassis(chassis);
 		count++;
 	}
 
