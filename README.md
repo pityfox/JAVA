@@ -3,7 +3,7 @@ Formation AJC JAVA
 
 -Projet 3: Tableaux
 
--Projet 4: Manipulation des classes\n
+-Projet 4: Manipulation des classes
 -ProjetVille: Methode de comparaison de classes
 -ProjetSalarie: Lien entre les classes : Creation d'une entreprise, ses salariés, leur status etc..
 -ProjetAssociation: Static/non static au sein des classes
