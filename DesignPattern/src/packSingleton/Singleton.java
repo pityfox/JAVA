@@ -7,6 +7,7 @@ public class Singleton {
 		
 	}
 	
+	// Recupere toujours la même instance à chaque appel
 	public static Singleton getInstance(){
 		if(instance == null)instance = new Singleton();
 		return instance;

@@ -29,7 +29,7 @@ public class Prof {
 	}
 	
 	// Méthodes
-	// ajout d'un eleve = Abonnement
+	// ajout d'un eleve = "Abonnement"
 	public void addEleve(Eleve el){
 		for(int i=0;i<this.eleves.length;i++){
 			if(this.eleves[i] == null){
