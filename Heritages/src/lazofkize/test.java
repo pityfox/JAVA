@@ -1,6 +1,7 @@
-package testHeritage;
+package lazofkize;
+import testHeritage.*;
 
-public class Test {
+public class test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,23 +16,13 @@ public class Test {
 		// Appel M4 de la classeB qui appel M1 héritée de la classeA
 		mmB.M4();
 		
-		// A l interieur du package, z est visible/public
-		System.out.println(mmA.z);
-		mmA.z = 50;
-		System.out.println(mmB.z);
+		// A l exterieur du package, z n'est plus visible/private
+//		System.out.println(mmA.z);
+//		mmA.z = 50;
+//		System.out.println(mmB.z);
 		// Affichage du z changé dans B venant de A
 		mmB.M5();
-		
-		// Redefinitions + surcharge de affiche dans B
-		mmA.affiche();
-		mmB.affiche();
-		mmB.affiche(10);
-		
-		// SUPER
-		mmB.affiche2();
-		
-		System.out.println(mmA);
-		System.out.println(mmB);
+
 	}
 
 }
