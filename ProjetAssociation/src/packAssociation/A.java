@@ -4,7 +4,6 @@ public class A {
 	// Attributs
 	private static String x="A";
 	private String y;
-	private int compteur1;
 	private static int compteur2;
 
 	// Getters & Setters
