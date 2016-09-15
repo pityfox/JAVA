@@ -14,6 +14,10 @@ public class Test {
 		A monA = new A();
 		I1 monI2 = monA;
 		monI2.M1();
+		
+		I3 monI3 = new D();
+		monI3.Impl();
+		new D().Impl();
 	}
 
 }
