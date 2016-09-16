@@ -15,9 +15,14 @@ public class Personne implements Comparable<Personne>{
 	public Personne(){
 		
 	}
-	public Personne(String nom, String prenom, int age){
+	
+	public Personne(String nom, String prenom){
 		this.nom = nom;
 		this.prenom = prenom;
+	}
+	
+	public Personne(String nom, String prenom, int age){
+		this(nom, prenom);
 		this.age = age;
 	}
 	

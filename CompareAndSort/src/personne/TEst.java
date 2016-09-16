@@ -2,6 +2,7 @@ package personne;
 
 import java.util.Arrays;
 
+
 public class TEst {
 
 	public static void main(String[] args) {
@@ -41,8 +42,8 @@ public class TEst {
 				new Personne("F","G",5)
 			};
 		
-		for(Personne p:Tab)
-			Arrays.sort(Tab);
+		Arrays.sort(Tab);
+		
 		for(Personne p:Tab)
 			System.out.println(p);
 		}
@@ -55,9 +56,12 @@ public class TEst {
 				new Personne("F","G",5)
 			};
 		
-		for(Personne p:Tab)
-			Arrays.sort(Tab, new ComparePrenom());
+		Arrays.sort(Tab, new ComparePrenom());
+		
 		for(Personne p:Tab)
 			System.out.println(p);
 	}
+	
+	
+
 }
