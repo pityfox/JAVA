@@ -14,4 +14,8 @@ public enum EBoisson {
 	private EBoisson(int prix){
 		this.prix = prix;
 	}
+	
+	public String toString(){
+		return this.name() + " " + this.prix + "€";
+	}
 }

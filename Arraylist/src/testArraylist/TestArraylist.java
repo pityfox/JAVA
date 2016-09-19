@@ -6,9 +6,18 @@ public class TestArraylist {
 
 	public static void main(String[] args) {
 		// ArrayList non typée
-		test1();
+//		test1();
 		// ArrayList typée String
-		test2();
+//		test2();
+		
+		ArrayList al = new ArrayList();
+		al.add(10);
+		al.add(20);
+		al.add("lol");
+		
+		System.out.println(al.get(1));
+		al.remove(1);
+		System.out.println(al.get(1));
 	}
 
 	// ArrayList non typée

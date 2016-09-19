@@ -13,4 +13,8 @@ public enum EGateau {
 	private EGateau(int prix){
 		this.prix = prix;
 	}
+	
+	public String toString(){
+		return this.name() + " " + this.prix + "€";
+	}
 }

@@ -23,8 +23,7 @@ public class Facture {
 		rep += "--------------------------------------------\n";
 		if(lignes != null)
 			for(Ligne l:lignes)
-				if (l != null)
-					rep += l.toString()+"\n";
+				rep += l.toString()+"\n";
 		rep += "--------------------------------------------\n";
 		rep += "\t\tTotal à payer\t" + prixTotal + "€";
 		return rep;
