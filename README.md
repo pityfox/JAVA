@@ -15,3 +15,8 @@ Formation AJC JAVA
 - Héritages: Test des classes héritées
 - AbstractClass : Les classes Abstraites
 - Interfaces : Les interfaces et "multiple héritage"
+- CompareAndSort : Comparaison et tris de tableaux
+- ArrayList : tableaux dynamiques
+	- projetMagasin : Facturation / liste de courses
+- HashMap : Dictionnaires et generation de clef objet pour comparaison d'objets dans des instances différentes
+- Exceptions : Gestion des plantages et saisies
