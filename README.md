@@ -20,3 +20,6 @@ Formation AJC JAVA
 	- projetMagasin : Facturation / liste de courses
 - HashMap : Dictionnaires et generation de clef objet pour comparaison d'objets dans des instances différentes
 - Exceptions : Gestion des plantages et saisies
+- FilesIO : Parcourir un dossier ses fichiers et sous repertoires
+- Serialisation : Mettre un objet en mémoire, fichiers, bin, xml
+- jDBC : Connexions et manipulation SGBD
