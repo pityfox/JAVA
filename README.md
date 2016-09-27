@@ -23,3 +23,4 @@ Formation AJC JAVA
 - FilesIO : Parcourir un dossier ses fichiers et sous repertoires
 - Serialisation : Mettre un objet en mémoire, fichiers, bin, xml
 - jDBC : Connexions et manipulation SGBD
+- BigProjetHopital : Projet en binome DAO+METIER+Presentation

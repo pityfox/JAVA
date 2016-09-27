@@ -7,17 +7,18 @@ import java.util.Scanner;
 public class TestHashMap {
 
 	public static void main(String[] args) {
-//		testHashMap();
+		testHashMap();
 		
-		testClient();
+//		testClient();
 	}
 
 	static void testHashMap(){
 		HashMap<Integer, String> dico = new HashMap<Integer, String>();
-		dico.put(1,"toto");
+		dico.put(1,"tonper");
 		dico.put(2,"titi");
 		dico.put(3,"toto");
-		
+		dico.put(1,"lol");
+
 		System.out.println(dico.get(1));
 		
 		System.out.println(dico.keySet());
