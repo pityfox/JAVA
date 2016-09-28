@@ -24,3 +24,4 @@ Formation AJC JAVA
 - Serialisation : Mettre un objet en mémoire, fichiers, bin, xml
 - jDBC : Connexions et manipulation SGBD
 - BigProjetHopital : Projet en binome DAO+METIER+Presentation
+- bigProjectHopitalSrc : Correction/projet du prof ??
